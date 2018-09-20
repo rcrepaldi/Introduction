@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.github.gfx.ribbonizer'
+
+apply plugin: 'io.fabric'
+
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file(System.getenv('HOME') + '/.android/debug.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.br.introduction"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            debuggable false
+
+            buildConfigField "String", "DEFAULT_STRING", "\"release\""
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.config
+            debuggable true
+
+            ext.betaDistributionReleaseNotes = "Primeiro release note da distribuicao do app Introduction versão"
+
+            buildConfigField "String", "DEFAULT_STRING", "\"debug\""
+        }
+        qa {
+            applicationIdSuffix ".qa"
+            signingConfig signingConfigs.config
+            debuggable true
+
+            buildConfigField "String", "DEFAULT_STRING", "\"qa\""
+        }
+        homolog {
+            applicationIdSuffix ".homolog"
+            signingConfig signingConfigs.config
+            debuggable true
+
+            buildConfigField "String", "DEFAULT_STRING", "\"homolog\""
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+ribbonizer {
+    project.("android").buildTypes.all { build ->
+        def buildName = build.name
+        if (buildName != "release") {
+            builder { variant, iconFile ->
+                if (variant.name == "debug") {
+                    return greenRibbonFilter(variant, iconFile)
+                } else if (variant.name == "homolog") {
+                    return yellowRibbonFilter(variant, iconFile)
+                } else if (variant.name == "qa") {
+                    return grayRibbonFilter(variant, iconFile)
+                } else {
+                    return customColorRibbonFilter(variant, iconFile, "#cc000099")
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlinVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.appcompatVersion"
+    implementation "com.android.support:design:$rootProject.appcompatVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true
+    }
+    kapt "com.android.databinding:compiler:3.1.4"
+}

@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">Introduction</string>
+
+    <!-- Content Description -->
+    <string name="content_description_logo_intro">Introduction</string>
+    <string name="content_description_viewpager_carousel">Carrossel com 3 itens</string>
+
+    <string name="how_should_be">como deve ser</string>
+    <string name="simple_and_complete">simples e completo</string>
+    <string name="description_simple_and_complete">soluções inteligentes para tornar a sua vida mais fácil</string>
+    <string name="no_bureaucracy">sem burocracia</string>
+    <string name="description_no_bureaucracy">não se preocupe mais com papelada e filas de correios, tudo é feito por aqui</string>
+    <string name="visa_coverage">cobertura CARD</string>
+    <string name="description_visa_coverage">tranquilidade e segurança de uma das maiores empresas do mundo</string>
+    <string name="access_account">acessar conta</string>
+    <string name="create_account">criar acesso</string>
+    <string name="allow">permitir</string>
+    <string name="deny">negar</string>
+    <string name="understood">entendi</string>
+    <string name="permission_required">permissão necessária</string>
+    <string name="description_permission_required">Precisamos que nos de a permissão de câmera, vá em ajustes>privacidade>câmera nas configurações do dispositivo.</string>
+    <string name="permission_camera">permissão de câmera</string>
+    <string name="description_permission_camera">Precisamos que você nos deixe acessar a sua câmera, não se preocupe você é o único que pode tirar fotos com ela.</string>
+    <string name="code_sending">envio de código</string>
+    <string name="description_code_sending">confirme o número para enviar novamente</string>
+    <string name="cancel">cancelar</string>
+    <string name="send">enviar</string>
+    <string name="number_phone_with_ddd">número de telefone (com DDD)</string>
+    <string name="fontLight">fonts/Uni-Sans-Light.ttf</string>
+    <string name="warning_message">Alerta</string>
+</resources>

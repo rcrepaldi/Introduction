@@ -1,0 +1,137 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccentMainComplementary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryBrand</item>
+        <item name="colorAccent">@color/colorAccentMainActive</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextFontLight">
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- Text size 32 -->
+    <style name="TextSizeBold32">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Bold.ttf</item>
+    </style>
+
+    <!-- Text size 24 -->
+    <style name="TextSizeRegular24">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- Text size 24 -->
+    <style name="TextSizeLight24">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- Text size 20 -->
+    <style name="TextSizeSemiBold20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-SemiBold.ttf</item>
+    </style>
+
+    <!-- Text size 16 -->
+    <style name="TextSizeLight16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- Text size 14 -->
+    <style name="TextSizeRegular14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- Text size 14 -->
+    <style name="TextSizeLight14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- Text size 12 -->
+    <style name="TextSizeLight12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- Text size 8 -->
+    <style name="TextSizeRegular8">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- Button primary -->
+    <style name="ButtonPrimary">
+        <item name="android:background">@drawable/button_primary_medium</item>
+        <item name="android:width">156dp</item>
+        <item name="android:height">48dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@drawable/text_primary</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- Button secondary -->
+    <style name="ButtonSecondary">
+        <item name="android:background">@drawable/button_secondary_medium</item>
+        <item name="android:width">156dp</item>
+        <item name="android:height">48dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@drawable/text_secondary</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- Button negative -->
+    <style name="ButtonNegative">
+        <item name="android:background">@drawable/button_negative</item>
+        <item name="android:width">156dp</item>
+        <item name="android:height">48dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@drawable/text_negative</item>
+        <item name="fontPath">fonts/Uni-Sans-Regular.ttf</item>
+    </style>
+
+    <!-- EditText custom-->
+    <style name="EditTextCustom">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+
+    <!-- EditText custom success-->
+    <style name="EditTextCustomSuccess">
+        <item name="android:background">@drawable/edittext_background_success</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontPath">fonts/Uni-Sans-Light.ttf</item>
+    </style>
+</resources>
